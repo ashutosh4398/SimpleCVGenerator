@@ -1,0 +1,22 @@
+{% extends "resume_gen/base.html" %}
+{% block body %}
+    <h2 class="text-info">{{ profile.name }}</h2>
+    <h2 class="text-info">{{ profile.email }}</h2>
+    <h2 class="text-info">{{ profile.phone }}</h2>
+    <hr>
+    <br>
+    <p class="text-warning">Summary</p>
+    <p class="text-warning">{{ profile.summary }}</p>
+    <hr>
+    <br>
+    <p class="text-success">Skills</p>
+    <p class="text-success">{{ profile.skills }}</p>
+    <hr>
+    <br>
+
+    <p class="text-danger">Education</p>
+    <ul class="text-danger">
+        <li>Schooling: {{ profile.school }}</li>
+        <li>{{ profile.degree }} from {{ profile.university }}</li>
+    </ul>
+{% endblock body %}

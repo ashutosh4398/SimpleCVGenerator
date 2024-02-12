@@ -21,4 +21,6 @@ import resume_gen.views as resume_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', resume_views.ProfileCreation.as_view(), name="resume-create"),
+    path('<int:pk>/', resume_views.ResumeDetailView.as_view(), name="resume-view"),
+    path('list/', resume_views.ProfileListview.as_view(), name="resume-list"),
 ]
