@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import resume_gen.views as resume_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', resume_views.ProfileCreation.as_view(), name="resume-create"),
 ]
